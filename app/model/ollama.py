@@ -144,3 +144,15 @@ class Llama3_70B(OllamaModel):
     def __init__(self):
         super().__init__("llama3:70b")
         self.note = "Llama3 70B model."
+
+
+class SWELlama_7B(OllamaModel):
+    def __init__(self):
+        super().__init__("moresearch/swe7b")
+        self.note = "SWE-Llama 7B model."
+
+
+class SWELlama_13B(OllamaModel):
+    def __init__(self):
+        super().__init__("moresearch/swe13b")
+        self.note = "SWE-Llama 13B model."

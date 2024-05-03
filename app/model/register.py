@@ -20,6 +20,8 @@ def register_all_models() -> None:
 
     common.register_model(ollama.Llama3_8B())
     common.register_model(ollama.Llama3_70B())
+    common.register_model(ollama.SWELlama_7B())
+    common.register_model(ollama.SWELlama_13B())
 
     # register default model as selected
     common.SELECTED_MODEL = gpt.Gpt35_Turbo0125()
