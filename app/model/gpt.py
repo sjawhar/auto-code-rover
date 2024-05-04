@@ -264,3 +264,9 @@ class Gpt4_0613(OpenaiModel):
     def __init__(self):
         super().__init__("gpt-4-0613", 0.00003, 0.00006)
         self.note = "Not turbo. Up to Sep 2021."
+
+
+class SWELlama_13B(OpenaiModel):
+    def __init__(self):
+        super().__init__("/root/SWE-Llama-13b", 0, 0)
+        self.note = "SWE-Llama 13B model."

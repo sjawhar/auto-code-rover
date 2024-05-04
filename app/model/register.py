@@ -13,6 +13,7 @@ def register_all_models() -> None:
     common.register_model(gpt.Gpt35_Turbo16k_0613())
     common.register_model(gpt.Gpt35_Turbo0613())
     common.register_model(gpt.Gpt4_0613())
+    common.register_model(gpt.SWELlama_13B())
 
     common.register_model(claude.Claude3Opus())
     common.register_model(claude.Claude3Sonnet())

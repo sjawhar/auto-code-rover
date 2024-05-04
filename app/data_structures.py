@@ -78,9 +78,13 @@ class MessageThread:
         self.messages.append({"role": role, "content": message})
 
     def add_system(self, message: str):
+        if self.messages and self.messages[-1]["role"] == "user":
+            message = self.messages.pop()["content"] + "\n" + message
         self.messages.append({"role": "system", "content": message})
 
     def add_user(self, message: str):
+        if self.messages and self.messages[-1]["role"] == "user":
+            message = self.messages.pop()["content"] + "\n" + message
         self.messages.append({"role": "user", "content": message})
 
     def add_tool(self, message: str, tool_call_id: str):

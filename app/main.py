@@ -467,7 +467,6 @@ def run_raw_task(task: RawTask) -> bool:
 
 
 def do_inference(python_task: Task, task_output_dir: str) -> bool:
-
     apputils.create_dir_if_not_exists(task_output_dir)
 
     logger.add(
